@@ -1,0 +1,7 @@
+{
+  "/clock/*": {
+      "target": "http://localhost:5000/clock",
+      "secure": false,
+      "logLevel": "debug"
+  }
+}

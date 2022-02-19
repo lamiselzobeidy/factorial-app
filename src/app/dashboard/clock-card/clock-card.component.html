@@ -1,0 +1,16 @@
+<h1 style="text-align:center">{{userLogedTime}}</h1>
+<mat-card>
+  <mat-card-title>
+    <span *ngIf="!isActive">Clock in</span>
+    <span *ngIf="isActive">You are clocked in 👍</span>
+  </mat-card-title>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <time [ngClass]="{'active': isActive}">17h:15m</time>
+    <p>Today's hours</p>
+    <button mat-stroked-button (click)="clockedClicked();" [ngClass]="{'active': isActive}">
+      <span *ngIf="!isActive">clock in</span>
+      <span *ngIf="isActive">clock out</span>
+    </button>
+  </mat-card-content>
+</mat-card>

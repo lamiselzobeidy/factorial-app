@@ -1,0 +1,29 @@
+.side_container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0 1rem 1rem;
+  border-radius: 15px 0px 0px 15px;
+  box-shadow: 0px 0px 5px 0px #00000040;
+
+  button {
+    border: none;
+    border-radius: .5rem 0 0 .5rem;
+    padding: .5rem;
+    color: #515164;
+    margin: 3px 0;
+
+    &:hover,
+    &.active {
+      background-color: #d1e7ff;
+      color: #2a87ff;
+    }
+
+    .button_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 18px;
+    }
+  }
+}

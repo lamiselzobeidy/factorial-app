@@ -1,0 +1,75 @@
+// Override material design
+.mat-card:not([class*="mat-elevation-z"]) {
+  box-shadow: 0 0 4px rgba(28, 36, 43, .08),
+    0 4px 8px rgba(28, 36, 43, .08),
+    0 8px 32px rgba(28, 36, 43, .08);
+  max-width: 300px;
+  margin: 1rem;
+}
+
+mat-card-title {
+  color: #515164;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: .5rem;
+  text-align: center;
+}
+
+mat-card-content {
+  text-align: center;
+  padding: 2rem;
+
+
+  time {
+    color: #c5c5c5;
+    font-weight: bold;
+    font-size: 2.25rem;
+    font-family: 'Graduate', cursive;
+
+    &.active {
+      color: #3fb589;
+    }
+  }
+
+  p {
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: #515164;
+  }
+
+  button {
+    color: #fff;
+    background: #3fb589a3;
+
+    &.active {
+      color: #fff;
+      background-color: #3fb589;
+      animation: pulse-black 2s infinite;
+    }
+
+    width: 100%;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  @keyframes pulse-black {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(99, 243, 86, 0.7);
+    }
+
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+}
