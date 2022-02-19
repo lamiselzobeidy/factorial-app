@@ -1,4 +1,4 @@
-import { MainProfileComponent } from './profile/main-profile/main-profile.component';
+import { MainProfileComponent } from './me/main-profile/main-profile.component';
 import { MainDashboardComponent } from './dashboard/main-dashboard/main-dashboard.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
