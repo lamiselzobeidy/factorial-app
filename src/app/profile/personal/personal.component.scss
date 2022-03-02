@@ -10,8 +10,9 @@
 .emergancyContact,
 .bankInfo {
   display: flex;
-  justify-content: space-between;
-  padding: 4rem 0;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-grow: 1;
 }
 .generalInfoForm {
   display: flex;
@@ -22,6 +23,16 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+}
+input {
+  color: #1e1e31;
+  font: 16px/24px Inter, sans-serif;
+  overflow: hidden;
+  padding: 8px 32px 8px 16px;
+  white-space: nowrap;
+  width: 85%;
+  border-radius: 5px;
+  border-color: #e2e2e5;
 }
 .form {
   flex: 1 1 50%;
@@ -39,32 +50,5 @@
       font-size: 18px;
       padding: 0 5px;
     }
-  }
-}
-.form_text {
-  flex: 1 1 50%;
-  max-width: 380px;
-
-  h2 {
-    color: #1e1e31;
-    font-weight: normal;
-    margin-bottom: 5px;
-    margin-top: 10px;
-  }
-
-  p {
-    color: #515164;
-    font-size: 16px;
-  }
-
-  .icon {
-    color: #ff355e;
-    font-size: 30px;
-  }
-
-  .divider {
-    width: 30px;
-    background-color: #ff355e;
-    height: 2px;
   }
 }

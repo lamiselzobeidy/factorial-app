@@ -1,17 +1,239 @@
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
-<h1 style="text-align: center;">Hello Im personal</h1>
+<section class="personalContainer">
+  <section class="generalInfo">
+    <div class="form_text">
+      <mat-icon class="icon" aria-hidden="false" aria-label="perm_identity icon"
+        >perm_identity</mat-icon
+      >
+      <h2>General information</h2>
+      <p>Fill in your personal data</p>
+      <div class="divider"></div>
+    </div>
+    <div class="form">
+      <form [formGroup]="generalInfoForm">
+        <mat-label>First Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="firstname"
+          />
+        </mat-form-field>
+        <mat-label for="lastname">Last Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="lastname"
+          />
+        </mat-form-field>
+        <mat-label for="preferredname">Preferred Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="preferredname"
+          />
+        </mat-form-field>
+        <mat-label for="dateofbirth">Date of birth</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="dateofbirth"
+          />
+        </mat-form-field>
+        <mat-label for="legalgender">Legal gender</mat-label>
+        <mat-form-field appearance="outline">
+          <mat-select formControlName="paymentfrequency">
+            <mat-option value="choose">
+              --choose--
+            </mat-option>
+            <mat-option value="female">
+              Female
+            </mat-option>
+            <mat-option value="male">
+              Male
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-label for="nationality">Nationality</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="nationality"
+          />
+        </mat-form-field>
+        <mat-label for="phonenumber">Phone number</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="phonenumber"
+          />
+        </mat-form-field>
+        <mat-label for="paymentfrequency">Payment Frequency</mat-label>
+        <mat-form-field appearance="outline">
+          <mat-select formControlName="paymentfrequency">
+            <mat-option value="monthly">
+              Monthly
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </form>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section class="identificationNumber">
+    <div class="form_text">
+      <mat-icon class="icon" aria-hidden="false" aria-label="subtitles icon"
+        >subtitles</mat-icon
+      >
+      <h2>Identification number</h2>
+      <p>Add your ID number here</p>
+      <div class="divider"></div>
+    </div>
+    <div class="form">
+      <form [formGroup]="identificationNumberForm">
+        <mat-label for="number">ID Number</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="number"
+          />
+        </mat-form-field>
+      </form>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section class="addressInfo">
+    <div class="form_text">
+      <mat-icon class="icon" aria-hidden="false" aria-label="signpost icon"
+        >signpost</mat-icon
+      >
+      <h2>Address</h2>
+      <p>Fill in your address</p>
+      <div class="divider"></div>
+    </div>
+    <div class="form">
+      <form [formGroup]="addressForm">
+        <mat-label for="address">Address line 1</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="address"
+          />
+        </mat-form-field>
+        <mat-label for="address2">Address line 2</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="address2"
+          />
+        </mat-form-field>
+        <mat-label for="city">City</mat-label>
+        <mat-form-field class="twofields">
+          <input matInput type="text" inputmode="text" formControlName="city" />
+          <mat-label for="zipcode">Zip code</mat-label>
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="zipcode"
+          />
+        </mat-form-field>
+        <mat-label for="state">State / Province / Region</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="state"
+          />
+        </mat-form-field>
+        <mat-label for="country">Country</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="country"
+          />
+        </mat-form-field>
+      </form>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section class="emergancyContact">
+    <div class="form_text">
+      <mat-icon class="icon" aria-hidden="false" aria-label="monitor_heart icon"
+        >monitor_heart</mat-icon
+      >
+      <h2>Emergency contact</h2>
+      <p>Fill in your emergency contact information.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="form">
+      <form [formGroup]="emergancyContactForm">
+        <mat-label for="name">Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput type="text" inputmode="text" formControlName="name" />
+        </mat-form-field>
+        <mat-label for="phonenumber">Phone Number</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="phonenumber"
+          />
+        </mat-form-field>
+      </form>
+    </div>
+  </section>
+  <mat-divider></mat-divider>
+  <section class="bankInfo">
+    <div class="form_text">
+      <mat-icon class="icon" aria-hidden="false" aria-label="attach_money icon"
+        >attach_money</mat-icon
+      >
+      <h2>Bank information</h2>
+      <p>Details about the bank account of the employee</p>
+      <div class="divider"></div>
+    </div>
+    <div class="form">
+      <form [formGroup]="bankInfoForm">
+        <mat-label for="banknumber">Bank number</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="banknumber"
+          />
+        </mat-form-field>
+        <mat-label for="swiftbic">SWIFT/BIC</mat-label>
+        <mat-form-field appearance="outline">
+          <input
+            matInput
+            type="text"
+            inputmode="text"
+            formControlName="swiftbic"
+          />
+        </mat-form-field>
+      </form>
+    </div>
+  </section>
+</section>

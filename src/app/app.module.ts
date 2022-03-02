@@ -15,7 +15,8 @@ import { MainProfileComponent } from './me/main-profile/main-profile.component';
 import { MainDashboardComponent } from './dashboard/main-dashboard/main-dashboard.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,10 +27,12 @@ import { HttpClientModule } from '@angular/common/http';
     NavigationComponent
   ],
   imports: [
+    MatSelectModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    ReactiveFormsModule,
     HttpClientModule,
     NgxsModule.forRoot([LoginState, ShiftState])
   ],
